@@ -1,0 +1,38 @@
+{
+  "name": "mkroosevelt",
+  "description": "Command line application for creating Roosevelt app",
+  "author": "Roosevelt Framework Team <rooseveltframework@gmail.com>",
+  "contributors": [
+    {
+      "name": "Contributors",
+      "url": "https://github.com/rooseveltframework/generator-roosevelt/graphs/contributors"
+    }
+  ],
+  "version": "0.1.56",
+  "homepage": "https://github.com/rooseveltframework/generator-roosevelt",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "bin": {
+    "mkRoosevelt": "./app.js"
+  },
+  "dependencies": {
+    "inquirer": "7.0.0",
+    "yeoman-environment": "2.4.0"
+  },
+  "devDependencies": {
+    "generator-roosevelt": "0.7.0"
+  },
+  "keywords": [
+    "roosevelt.js",
+    "teddy.js",
+    "node.js",
+    "io.js",
+    "roosevelt",
+    "teddy",
+    "mvc",
+    "yeoman-generator"
+  ]
+}
