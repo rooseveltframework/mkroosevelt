@@ -2,7 +2,7 @@
 
 ## Next version
 
-- Fixed npx issue 
+- Fixed npx issue.
 
 ## 0.2.0
 
