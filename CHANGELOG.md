@@ -2,7 +2,7 @@
 
 ## Next version
 
-- Put your changes here...
+- Fixed npx issue 
 
 ## 0.2.0
 
