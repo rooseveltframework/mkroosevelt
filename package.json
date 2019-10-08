@@ -35,7 +35,6 @@
     "lint-staged": "~9.4.2",
     "mocha": "~6.2.1",
     "nyc": "~14.1.1",
-    "roosevelt": "~0.14.6",
     "standard": "~14.3.1"
   },
   "repository": {
@@ -75,8 +74,8 @@
   "scripts": {
     "codecov": "./node_modules/.bin/codecov",
     "coverage": "nyc mocha test/unit",
-    "lint": "standard",
-    "test": "echo \"TOOD: tests\""
+    "lint": "standard && eslint ./test",
+    "test": "mocha test/unit"
   },
   "lint-staged": {
     "*.js": "standard"
