@@ -24,10 +24,10 @@
   "engineStrict": true,
   "dependencies": {
     "inquirer": "~7.0.0",
-    "yeoman-environment": "~2.4.0"
+    "yeoman-environment": "~2.4.0",
+    "generator-roosevelt": "~0.7.0"
   },
   "devDependencies": {
-    "generator-roosevelt": "~0.7.0"
   },
   "repository": {
     "type": "git",

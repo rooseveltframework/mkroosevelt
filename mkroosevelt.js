@@ -26,7 +26,7 @@ function askDirectoryName () {
 function callYeoman (filename) {
   // search for generator
   env.lookup(() => {
-    env.run(`generator-roosevelt --standard-install ${filename}`)
+    env.run(`roosevelt --standard-install ${filename}`)
   })
 }
 
