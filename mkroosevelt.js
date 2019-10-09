@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const inquirer = require('inquirer')
-const path = require('path')
 const yeoman = require('yeoman-environment')
 const env = yeoman.createEnv()
 
