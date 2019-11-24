@@ -25,16 +25,17 @@
   "dependencies": {
     "inquirer": "~7.0.0",
     "yeoman-environment": "~2.6.0",
-    "generator-roosevelt": "~0.7.0"
+    "generator-roosevelt": "~0.7.1"
   },
   "devDependencies": {
+    "c8": "~6.0.1",
     "codecov": "~3.6.1",
-    "eslint": "~6.6.0",
-    "eslint-plugin-mocha": "~6.2.0",
-    "husky": "~3.0.8",
-    "lint-staged": "~9.4.2",
-    "mocha": "~6.2.1",
-    "nyc": "~14.1.1",
+    "eslint": "~6.7.0",
+    "eslint-plugin-mocha": "~6.2.2",
+    "fs-extra": "~8.1.0",
+    "husky": "~3.1.0",
+    "lint-staged": "~9.4.3",
+    "mocha": "~6.2.2",
     "standard": "~14.3.1"
   },
   "repository": {
@@ -64,18 +65,12 @@
       "mocha/no-exclusive-tests": "error"
     }
   },
-  "nyc": {
-    "reporter": [
-      "html",
-      "text",
-      "lcov"
-    ]
-  },
   "scripts": {
-    "codecov": "./node_modules/.bin/codecov",
-    "coverage": "nyc mocha test/unit",
+    "codecov": "codecov",
+    "coverage": "c8 --reporter=text --reporter=lcov mocha --timeout 25000 test/",
     "lint": "standard && eslint ./test",
-    "test": "mocha test/unit"
+    "test": "mocha test/",
+    "test-debug": "mocha --inspect-brk --timeout 10000 test/"
   },
   "lint-staged": {
     "*.js": "standard"
@@ -84,5 +79,9 @@
     "hooks": {
       "pre-commit": "lint-staged && eslint ./test"
     }
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/kethinov"
   }
 }
