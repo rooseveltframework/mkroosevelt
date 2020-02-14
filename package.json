@@ -24,7 +24,7 @@
   "engineStrict": true,
   "dependencies": {
     "inquirer": "~7.0.0",
-    "yeoman-environment": "~2.7.0",
+    "yeoman-environment": "~2.8.0",
     "generator-roosevelt": "~0.7.1"
   },
   "devDependencies": {
