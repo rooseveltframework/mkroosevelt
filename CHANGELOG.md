@@ -4,6 +4,11 @@
 
 - Put your changes here...
 
+## 0.2.2
+
+- Now always uses latest version of generator-roosevelt.
+- Various dependencies bumped.
+
 ## 0.2.1
 
 - Fixed npx issue.
