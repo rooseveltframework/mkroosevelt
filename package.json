@@ -23,7 +23,7 @@
   },
   "engineStrict": true,
   "dependencies": {
-    "inquirer": "~7.2.0",
+    "inquirer": "~7.3.0",
     "yeoman-environment": "~2.10.3",
     "generator-roosevelt": "*"
   },
