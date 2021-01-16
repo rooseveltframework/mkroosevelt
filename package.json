@@ -28,7 +28,7 @@
     "yeoman-environment": "~2.10.3"
   },
   "devDependencies": {
-    "c8": "~7.3.5",
+    "c8": "~7.4.0",
     "codecov": "~3.8.1",
     "eslint": "~7.16.0",
     "eslint-plugin-mocha": "~8.0.0",
