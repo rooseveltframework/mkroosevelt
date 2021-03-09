@@ -24,7 +24,7 @@
   "engineStrict": true,
   "dependencies": {
     "generator-roosevelt": "*",
-    "inquirer": "~7.3.3",
+    "inquirer": "~8.0.0",
     "yeoman-environment": "~2.10.3"
   },
   "devDependencies": {
@@ -67,7 +67,7 @@
     "codecov": "codecov",
     "coverage": "c8 --reporter=text --reporter=lcov mocha --timeout 25000 test/",
     "lint": "standard && eslint ./test",
-    "test": "mocha test/",
+    "test": "mocha --timeout 25000 test/",
     "test-debug": "mocha --inspect-brk --timeout 10000 test/"
   },
   "funding": {
