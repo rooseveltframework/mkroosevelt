@@ -19,21 +19,21 @@
     "mkroosevelt": "mkroosevelt.js"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=14.0.0"
   },
   "engineStrict": true,
   "dependencies": {
     "generator-roosevelt": "*",
-    "inquirer": "~8.0.0",
-    "yeoman-environment": "~3.4.0"
+    "inquirer": "~8.1.2",
+    "yeoman-environment": "~3.5.1"
   },
   "devDependencies": {
-    "c8": "~7.7.1",
-    "codecov": "~3.8.1",
-    "eslint": "~7.25.0",
-    "eslint-plugin-mocha": "~8.1.0",
-    "fs-extra": "~9.1.0",
-    "mocha": "~8.3.2",
+    "c8": "~7.7.3",
+    "codecov": "~3.8.2",
+    "eslint": "~7.30.0",
+    "eslint-plugin-mocha": "~9.0.0",
+    "fs-extra": "~10.0.0",
+    "mocha": "~9.0.2",
     "standard": "~16.0.3"
   },
   "repository": {
