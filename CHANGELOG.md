@@ -2,8 +2,12 @@
 
 ## Next version
 
-- Now only testing on Node 14 and 15.
 - Put your changes here...
+
+## 0.2.3
+
+- Dropped support for Node <16 and various other maintenance updates.
+- Various dependencies bumped.
 
 ## 0.2.2
 

@@ -8,7 +8,7 @@
       "url": "https://github.com/rooseveltframework/mkroosevelt/graphs/contributors"
     }
   ],
-  "version": "0.2.2",
+  "version": "0.2.3",
   "files": [
     "mkroosevelt.js"
   ],
@@ -30,7 +30,7 @@
   "devDependencies": {
     "c8": "~7.11.3",
     "codecov": "~3.8.2",
-    "eslint": "~8.19.0",
+    "eslint": "~8.20.0",
     "eslint-plugin-mocha": "~10.0.5",
     "fs-extra": "~10.1.0",
     "mocha": "~10.0.0",
