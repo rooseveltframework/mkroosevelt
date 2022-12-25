@@ -4,6 +4,11 @@
 
 - Put your changes here...
 
+## 0.20.0
+
+- Matching version with `generator-roosevelt`.
+- Various dependencies bumped.
+
 ## 0.2.3
 
 - Dropped support for Node <16 and various other maintenance updates.
