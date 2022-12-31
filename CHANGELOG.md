@@ -4,6 +4,11 @@
 
 - Put your changes here...
 
+## 0.21.0
+
+- Matching version with `generator-roosevelt`.
+- Various dependencies bumped.
+
 ## 0.20.0
 
 - Matching version with `generator-roosevelt`.
