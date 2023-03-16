@@ -20,4 +20,4 @@ If you are a maintainer of mkroosevelt, please follow the following release proc
 
 ### Important note: Do a new release with every release of generator-roosevelt
 
-Even though `generator-roosevelt` is listed as `*` in package.json, the package-lock.json still needs to be regenerated every time `generator-roosevelt` is pushed to npm. As such, whenever doing a publish of `generator-roosevelt`, you should also bump the version number of `mkroosevelt` to match, regenerate the package-lock.json, and publish `mkroosevelt` to npm as well.
+The package-lock.json file needs to be regenerated every time `generator-roosevelt` is pushed to npm. As such, whenever doing a publish of `generator-roosevelt`, you should also bump the version number of `mkroosevelt` to match, regenerate the package-lock.json, and publish `mkroosevelt` to npm as well.
