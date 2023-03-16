@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
-const inquirer = require('inquirer')
 const yeoman = require('yeoman-environment')
 const env = yeoman.createEnv()
 
 const myArgs = process.argv.slice(2)
 let chosenDirectoryName
 
-function askDirectoryName () {
+async function askDirectoryName () {
+  const inquirerModule = await import('inquirer')
+  const inquirer = inquirerModule.default
+
   return inquirer
     .prompt([
       {

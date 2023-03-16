@@ -4,6 +4,12 @@
 
 - Put your changes here...
 
+## 0.21.3
+
+- Matching version with `generator-roosevelt`.
+- Pinned deps.
+- Various dependencies bumped.
+
 ## 0.21.2
 
 - Matching version with `generator-roosevelt`.
