@@ -8,7 +8,7 @@
       "url": "https://github.com/rooseveltframework/mkroosevelt/graphs/contributors"
     }
   ],
-  "version": "0.21.4",
+  "version": "0.21.5",
   "files": [
     "mkroosevelt.js"
   ],
@@ -23,14 +23,14 @@
   },
   "engineStrict": true,
   "dependencies": {
-    "generator-roosevelt": "0.21.4",
-    "inquirer": "9.1.5",
+    "generator-roosevelt": "0.21.5",
+    "inquirer": "9.2.1",
     "yeoman-environment": "3.15.1"
   },
   "devDependencies": {
     "c8": "7.13.0",
     "codecov": "3.8.3",
-    "eslint": "8.37.0",
+    "eslint": "8.40.0",
     "eslint-plugin-mocha": "10.1.0",
     "fs-extra": "11.1.1",
     "mocha": "10.2.0",
