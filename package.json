@@ -8,7 +8,7 @@
       "url": "https://github.com/rooseveltframework/mkroosevelt/graphs/contributors"
     }
   ],
-  "version": "0.21.5",
+  "version": "0.21.6",
   "files": [
     "mkroosevelt.js"
   ],
@@ -23,9 +23,9 @@
   },
   "engineStrict": true,
   "dependencies": {
-    "generator-roosevelt": "0.21.5",
-    "inquirer": "9.2.1",
-    "yeoman-environment": "3.15.1"
+    "generator-roosevelt": "0.21.6",
+    "inquirer": "9.2.2",
+    "yeoman-environment": "3.16.1"
   },
   "devDependencies": {
     "c8": "7.13.0",
