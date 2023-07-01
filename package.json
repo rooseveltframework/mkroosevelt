@@ -24,17 +24,17 @@
   "engineStrict": true,
   "dependencies": {
     "generator-roosevelt": "0.21.7",
-    "inquirer": "9.2.3",
-    "yeoman-environment": "3.18.4"
+    "inquirer": "9.2.7",
+    "yeoman-environment": "3.19.3"
   },
   "devDependencies": {
-    "c8": "7.13.0",
+    "c8": "8.0.0",
     "codecov": "3.8.3",
-    "eslint": "8.40.0",
+    "eslint": "8.44.0",
     "eslint-plugin-mocha": "10.1.0",
     "fs-extra": "11.1.1",
     "mocha": "10.2.0",
-    "standard": "17.0.0"
+    "standard": "17.1.0"
   },
   "repository": {
     "type": "git",
