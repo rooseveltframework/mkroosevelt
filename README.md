@@ -2,7 +2,7 @@ mkroosevelt
 ===
 
 [![Build Status](https://github.com/rooseveltframework/mkroosevelt/workflows/CI/badge.svg
-)](https://github.com/rooseveltframework/mkroosevelt/actions?query=workflow%3ACI) [![codecov](https://codecov.io/gh/rooseveltframework/mkroosevelt/branch/master/graph/badge.svg)](https://codecov.io/gh/rooseveltframework/mkroosevelt) [![npm](https://img.shields.io/npm/v/mkroosevelt.svg)](https://www.npmjs.com/package/mkroosevelt)
+)](https://github.com/rooseveltframework/mkroosevelt/actions?query=workflow%3ACI) [![npm](https://img.shields.io/npm/v/mkroosevelt.svg)](https://www.npmjs.com/package/mkroosevelt)
 
 Command line application for creating [Roosevelt](https://github.com/rooseveltframework/roosevelt) apps.
 
