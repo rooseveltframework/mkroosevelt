@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 (async () => {
   const yeomanEnvModule = await import('yeoman-environment')
-  const env = new yeomanEnvModule.default()
+  const YeomanEnvironment = yeomanEnvModule.default
+  const env = new YeomanEnvironment()
   const args = process.argv.slice(2)
   let chosenDirectoryName
   if (args.length > 0 && args !== undefined) chosenDirectoryName = args[0]
