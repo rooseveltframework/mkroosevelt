@@ -19,7 +19,7 @@
     "mkroosevelt": "mkroosevelt.js"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "generator-roosevelt": "0.30.0",
