@@ -8,6 +8,11 @@
 
 - Any version release not specifically called out in this changelog is only a maintenance release to match the version with `generator-roosevelt` and to update other dependencies.
 
+## 0.30.0
+
+- Added option to select which type of sample app to make.
+- Updated dependencies.
+
 ## 0.2.3
 
 - Dropped support for Node <16 and various other maintenance updates.
