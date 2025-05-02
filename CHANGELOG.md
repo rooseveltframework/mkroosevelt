@@ -1,12 +1,4 @@
-# mkroosevelt Changelog
-
-## Next version
-
-- Put your changes here...
-
-## Skipped versions
-
-- Any version release not specifically called out in this changelog is only a maintenance release to match the version with `generator-roosevelt` and to update other dependencies.
+This project's versioning tracks Roosevelt's versioning. When some version numbers are skipped, it's because the generator was not updated for that version of Roosevelt.
 
 ## 0.30.0
 
