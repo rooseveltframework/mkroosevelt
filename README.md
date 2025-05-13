@@ -1,7 +1,4 @@
-mkroosevelt
-===
-
-[![npm](https://img.shields.io/npm/v/mkroosevelt.svg)](https://www.npmjs.com/package/mkroosevelt)
+🏭🧸 **mkroosevelt** [![npm](https://img.shields.io/npm/v/mkroosevelt.svg)](https://www.npmjs.com/package/mkroosevelt)
 
 Command line application for creating [Roosevelt](https://github.com/rooseveltframework/roosevelt) apps.
 
