@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "generator-roosevelt": "0.31.1",
-    "inquirer": "12.8.2",
+    "inquirer": "12.9.4",
     "yeoman-environment": "4.4.3"
   },
   "devDependencies": {
