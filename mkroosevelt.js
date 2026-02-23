@@ -11,7 +11,7 @@
     chosenAppType = 'MPA — multi-page app (recommended for most apps)'
   } else {
     const inquirerModule = await import('inquirer')
-    await inquirerModule.default.prompt([
+    const response = await inquirerModule.default.prompt([
       {
         name: 'file',
         type: 'input',
@@ -20,7 +20,7 @@
       },
       {
         name: 'type',
-        type: 'list',
+        type: 'select',
         message: 'Which type of app do you want?',
         choices: [
           'MPA — multi-page app (recommended for most apps)',
@@ -28,10 +28,9 @@
           'SPA — single page app (advanced users only)'
         ]
       }
-    ]).then((response) => {
-      chosenDirectoryName = response.file
-      chosenAppType = response.type
-    })
+    ])
+    chosenDirectoryName = response.file
+    chosenAppType = response.type
   }
   await env.lookup()
   if (chosenAppType === 'MPA — multi-page app (recommended for most apps)') await env.run(`roosevelt --standard-mpa-install ${chosenDirectoryName}`)
