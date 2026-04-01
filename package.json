@@ -22,7 +22,7 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "generator-roosevelt": "0.31.1",
+    "generator-roosevelt": "0.31.3",
     "inquirer": "13.3.0",
     "yeoman-environment": "5.1.3"
   },
