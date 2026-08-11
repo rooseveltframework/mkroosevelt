@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "c8": "11.0.0",
-    "fs-extra": "11.3.4",
+    "fs-extra": "11.4.0",
     "mocha": "11.7.5",
     "standard": "17.1.2"
   },
