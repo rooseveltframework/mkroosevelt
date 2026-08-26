@@ -1,86 +1,67 @@
-/* eslint-env mocha */
-const assert = require('assert')
-const spawn = require('child_process').spawn
-const fs = require('fs-extra')
+const { describe, it, afterEach } = require('node:test')
+const assert = require('node:assert')
+const { spawn } = require('node:child_process')
+const fs = require('node:fs')
+const path = require('node:path')
+
+// each test generates into one of these, and the ones left behind by a failed run would make the next run pass for the wrong reason
+const generatedDirs = ['my-roosevelt-sample-app', 'blah']
+
+// answers the prompts as they appear, in order, then resolves once the generator has finished
+function generate (args, replies = []) {
+  return new Promise((resolve, reject) => {
+    const child = spawn('node', ['mkroosevelt.js', ...args])
+    let remaining = [...replies]
+
+    child.stdout.on('data', data => {
+      if (!remaining.length) return
+      if (data.toString().includes(remaining[0].when)) {
+        const [{ answer }] = remaining
+        remaining = remaining.slice(1)
+        child.stdin.write(answer)
+      }
+    })
+
+    child.on('error', reject)
+    child.on('close', () => resolve())
+  })
+}
+
+const nameQuestion = { when: 'What would you like to name your Roosevelt app', answer: '\n' }
+const typeQuestion = answer => ({ when: 'Which type of app do you want?', answer })
+
+function assertGenerated (dir, files) {
+  for (const file of files) {
+    assert.ok(fs.existsSync(path.join(dir, file)), `${path.join(dir, file)} should have been generated`)
+  }
+}
 
 describe('Create Roosevelt app', () => {
-  it('should answer prompts and select MPA', (done) => {
-    const child = spawn('node', ['mkroosevelt.js'])
-    child.stdout.on('data', (data) => {
-      if (data.includes('What would you like to name your Roosevelt app')) child.stdin.write('\n')
-      if (data.includes('Which type of app do you want?')) child.stdin.write('\n')
-    })
-    child.on('close', () => {
-      let allThere = false
-      const exists1 = fs.existsSync('my-roosevelt-sample-app')
-      const exists2 = fs.existsSync('my-roosevelt-sample-app/.gitignore')
-      const exists3 = fs.existsSync('my-roosevelt-sample-app/app.js')
-      const exists4 = fs.existsSync('my-roosevelt-sample-app/mvc')
-      allThere = exists1 && exists2 && exists3 && exists4
-      fs.removeSync('my-roosevelt-sample-app')
-      assert.strictEqual(allThere, true)
-      done()
-    })
+  afterEach(() => {
+    for (const dir of generatedDirs) fs.rmSync(dir, { recursive: true, force: true })
   })
 
-  it('should answer prompts and select static site', (done) => {
-    const child = spawn('node', ['mkroosevelt.js'])
-    const answered = {}
-    child.stdout.on('data', (data) => {
-      if (!answered[0] && data.includes('What would you like to name your Roosevelt app')) {
-        answered[0] = true
-        child.stdin.write('\n')
-      }
-      if (!answered[1] && data.includes('Which type of app do you want?')) {
-        answered[1] = true
-        child.stdin.write('2\n')
-      }
-    })
-    child.on('close', () => {
-      let allThere = false
-      const exists = fs.existsSync('my-roosevelt-sample-app/statics/pages/index.js')
-      allThere = exists
-      fs.removeSync('my-roosevelt-sample-app')
-      assert.strictEqual(allThere, true)
-      done()
-    })
+  it('should answer prompts and select MPA', async () => {
+    await generate([], [nameQuestion, typeQuestion('\n')])
+
+    assertGenerated('my-roosevelt-sample-app', ['.gitignore', 'app.js', 'mvc'])
   })
 
-  it('should answer prompts and select SPA', (done) => {
-    const child = spawn('node', ['mkroosevelt.js'])
-    const answered = {}
-    child.stdout.on('data', (data) => {
-      if (!answered[0] && data.includes('What would you like to name your Roosevelt app')) {
-        answered[0] = true
-        child.stdin.write('\n')
-      }
-      if (!answered[1] && data.includes('Which type of app do you want?')) {
-        answered[1] = true
-        child.stdin.write('3\n')
-      }
-    })
-    child.on('close', () => {
-      let allThere = false
-      const exists = fs.existsSync('my-roosevelt-sample-app/mvc/models/getRandomNumber.js')
-      allThere = exists
-      fs.removeSync('my-roosevelt-sample-app')
-      assert.strictEqual(allThere, true)
-      done()
-    })
+  it('should answer prompts and select static site', async () => {
+    await generate([], [nameQuestion, typeQuestion('2\n')])
+
+    assertGenerated('my-roosevelt-sample-app', ['statics/pages/index.js'])
   })
 
-  it('should not prompt when given one at command line', (done) => {
-    const child = spawn('node', ['mkroosevelt.js', 'blah'])
-    child.on('close', () => {
-      let allThere = false
-      const exists1 = fs.existsSync('blah')
-      const exists2 = fs.existsSync('blah/.gitignore')
-      const exists3 = fs.existsSync('blah/app.js')
-      const exists4 = fs.existsSync('blah/mvc')
-      allThere = exists1 && exists2 && exists3 && exists4
-      fs.removeSync('blah')
-      assert.strictEqual(allThere, true)
-      done()
-    })
+  it('should answer prompts and select SPA', async () => {
+    await generate([], [nameQuestion, typeQuestion('3\n')])
+
+    assertGenerated('my-roosevelt-sample-app', ['mvc/models/getRandomNumber.js'])
+  })
+
+  it('should not prompt when given a directory name at the command line', async () => {
+    await generate(['blah'])
+
+    assertGenerated('blah', ['.gitignore', 'app.js', 'mvc'])
   })
 })
