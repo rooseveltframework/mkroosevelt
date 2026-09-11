@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "generator-roosevelt": "0.33.2",
-    "yeoman-environment": "6.2.0"
+    "yeoman-environment": "6.3.0"
   },
   "devDependencies": {
     "c8": "12.0.0",
